@@ -26,7 +26,7 @@ app.post('/', async (req,res) => {
         const prompt = req.body.prompt;
         const response = await openai.createCompletion({
             "model": "text-davinci-003",
-            "prompt": `${prompt}`,
+            "prompt": `I am a highly intelligent question answering bot. And will give you an answer/explanation as though you were a ten year old.${prompt}`,
             "temperature": 0.02,
             "max_tokens": 300,
             "top_p": 1,
